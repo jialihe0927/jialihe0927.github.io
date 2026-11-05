@@ -1,0 +1,93 @@
+    /* Theme: colors, fonts, and spacing */
+    :root {
+      color-scheme: light;
+      --paper: #fffdfd;
+      --rose: #a12d58;
+      --rose-light: #fbeef2;
+      --ink: #30252b;
+      --muted: #68565f;
+      --rule: #ebdbe1;
+      --display: Georgia, "Times New Roman", serif;
+      --body: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.68 var(--body); }
+    .wrap { width: min(78rem, calc(100% - 2rem)); margin-inline: auto; }
+    a { color: var(--rose); text-underline-offset: .22em; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+    .site-header { position: sticky; top: 0; z-index: 1; background: #fff8fa; border-bottom: 1px solid var(--rule); }
+    main section { scroll-margin-top: 6.5rem; }
+    .header-inner, .identity, nav, .contact-links { display: flex; align-items: center; flex-wrap: wrap; }
+    .header-inner { justify-content: space-between; gap: .65rem 2rem; min-height: 4.25rem; padding-block: .65rem; }
+    .identity { gap: .75rem; }
+    .brand { color: var(--rose); font: 700 1.3rem var(--display); text-decoration: none; }
+    .profile-toggle {
+      display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem;
+      color: var(--rose); background: var(--rose-light); border: 1px solid var(--rule);
+      border-radius: 50%; cursor: pointer;
+    }
+    .profile-toggle:hover, .profile-toggle[aria-expanded="true"] { background: #f7dce6; }
+    nav { gap: .4rem 1.45rem; font-size: .94rem; font-weight: 600; }
+    nav a { color: var(--ink); text-decoration: none; padding-block: .25rem; }
+    nav a:hover, nav a[aria-current="location"] { color: var(--rose); text-decoration: underline; }
+    .site-layout { padding-block: clamp(2.5rem, 6vw, 5rem); }
+    .site-layout.profile-open { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 3rem; align-items: start; }
+    main { max-width: 58rem; margin-inline: auto; }
+    .profile-card { padding: 1rem; background: #fff8fa; border: 1px solid var(--rule); border-radius: 1.1rem; text-align: center; }
+    .profile-photo { display: block; width: 100%; height: auto; border-radius: .7rem; }
+    .profile-name { margin: .9rem 0 .15rem; font: 700 1.45rem var(--display); }
+    .profile-card p:not(.profile-name) { margin: .2rem 0 .65rem; color: var(--muted); font-size: .88rem; }
+    .profile-links { display: grid; justify-items: start; gap: .6rem; width: fit-content; margin: 1rem auto 0; }
+    .profile-links a { display: inline-flex; align-items: center; gap: .65rem; color: var(--muted); font-size: .94rem; text-decoration: none; }
+    .profile-links a:hover { color: var(--rose); text-decoration: underline; }
+    .profile-links svg { flex: 0 0 auto; }
+    .contact-links { gap: .35rem 1rem; }
+    h1, h2, h3 { margin: 0; font-family: var(--display); line-height: 1.18; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 500; letter-spacing: -.045em; }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); color: var(--rose); font-weight: 500; }
+    h3 { font-size: clamp(1.22rem, 2.2vw, 1.45rem); font-weight: 600; }
+    p { margin: .75rem 0 0; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--rose); font-weight: 700; font-size: .74rem; letter-spacing: .13em; text-transform: uppercase; }
+    .intro { font-size: clamp(1.02rem, 2vw, 1.14rem); }
+    .intro .contact-links { margin-top: 1rem; font-size: .94rem; }
+    .section { border-top: 1px solid var(--rule); margin-top: 2.4rem; padding-top: 1.6rem; }
+    .cv-section h2 { color: var(--ink); font-weight: 600; font-size: clamp(1.1rem, 2.2vw, 1.4rem); }
+    .cv-section > .cv-title { margin-bottom: 1.5rem; color: var(--rose); font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 500; }
+    .cv-download { padding-bottom: 1.6rem; border-bottom: 1px solid var(--rule); }
+    .cv-download p { margin-top: .55rem; font: 500 1.2rem var(--display); }
+    .cv-details { padding-top: 2rem; }
+    .cv-details h2 { margin-top: 1.35rem; }
+    .cv-details h2:first-child { margin-top: 0; }
+    .cv-details ul { margin: .55rem 0 0; padding-left: 1.45rem; }
+    .cv-details li { padding-left: .15rem; margin-top: .25rem; }
+    .cv-details li + li { margin-top: .35rem; }
+    .course-table { width: 100%; margin-top: .55rem; border-collapse: collapse; text-align: left; }
+    .course-table th, .course-table td { padding: .55rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .course-table thead th { color: var(--ink); background: #fff8fa; font-weight: 650; }
+    .course-table tbody th { width: 10rem; color: var(--ink); font-weight: 600; }
+    .course-table td:last-child { width: 6.5rem; white-space: nowrap; }
+    .course-table tbody tr:last-child th, .course-table tbody tr:last-child td { border-bottom: 1px solid var(--rule); }
+    .transcript-link { display: inline-flex; align-items: center; gap: .5rem; margin: .2rem 0 .8rem; text-decoration: underline; }
+    .transcript-link svg { flex: 0 0 auto; color: var(--rose); }
+    @media (max-width: 520px) {
+      .course-table th, .course-table td { padding: .55rem .3rem; }
+      .course-table tbody th { width: 7.2rem; }
+      .course-table td:last-child { width: 5.2rem; }
+    }
+    .entry { margin-top: 1.35rem; }
+    .entry + .entry { border-top: 1px dashed var(--rule); padding-top: 1.15rem; }
+    .entry p { margin-top: .4rem; }
+    .research-meta a, .project-meta a { color: var(--rose); text-decoration: underline; text-underline-offset: .16em; }
+    .paper-link { color: var(--rose); text-decoration: underline; text-underline-offset: .16em; }
+    .meta, .personal { color: var(--muted); font-size: .92rem; }
+    .footer { border-top: 1px solid var(--rule); padding-block: 1rem 1.5rem; color: var(--muted); font-size: .88rem; }
+    .home-contact { display: flex; align-items: center; gap: .55rem; margin-top: 1rem; }
+    .home-contact-icon { flex: 0 0 auto; color: #e48cac; }
+    @media (max-width: 760px) {
+      .wrap { width: calc(100% - 2rem); }
+      .site-layout.profile-open { grid-template-columns: minmax(0, 1fr); gap: 1.7rem; }
+      .profile-card { width: min(100%, 15rem); }
+      main { width: 100%; }
+    }
+  
